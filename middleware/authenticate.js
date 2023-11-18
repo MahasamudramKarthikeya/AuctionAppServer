@@ -14,7 +14,7 @@ try {
 
 
 // TO VERIFY TOKEN -> verify() FUNCTION CALLED INSIDE JWT
-const verifyToken = jwt.verify(token , process.env.SECRET_KEY);
+const verifyToken = jwt.verify(token , eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4-ktFSnZvYIyhGHuqeNONsX_VEhPSdkM1RLR_Gk4YRlI);
 
 // HERE WE GOT ALL INFORMATION ABOUT CURRENT USER INSIDE rootUser
 const rootUser  = await User.findOne({ _id: verifyToken._id , "tokens.token": token});
